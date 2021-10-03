@@ -115,28 +115,28 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../arqui/Componentes/HA.vhd">
+      <File Path="$PSRCDIR/sources_1/new/FA.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../arqui/Componentes/Adder8.vhd">
+      <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../arqui/Componentes/FA.vhd">
+      <File Path="$PSRCDIR/sources_1/new/HA.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../arqui/Proyecto Base Actividad 2/Proyecto Base.srcs/sources_1/new/ALU.vhd">
+      <File Path="$PSRCDIR/sources_1/new/Adder16.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
