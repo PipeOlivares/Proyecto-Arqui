@@ -1,0 +1,106 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 7696
+License: Customer
+
+Current time: 	Sun Oct 03 23:55:36 CLST 2021
+Time zone: 	Chile Standard Time (America/Santiago)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 24 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Programs/XILINX/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	D:/Programs/XILINX/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	pezol
+User home directory: C:/Users/pezol
+User working directory: C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base
+User country: 	CL
+User language: 	es
+User locale: 	es_CL
+
+RDI_BASEROOT: D:/Programs/XILINX/Vivado
+HDI_APPROOT: D:/Programs/XILINX/Vivado/2019.2
+RDI_DATADIR: D:/Programs/XILINX/Vivado/2019.2/data
+RDI_BINDIR: D:/Programs/XILINX/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/pezol/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/pezol/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/pezol/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	D:/Programs/XILINX/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/vivado.log
+Vivado journal file location: 	C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/vivado.jou
+Engine tmp dir: 	C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/.Xil/Vivado-7696-LAPTOP-DR04J4MT
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Programs/XILINX/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: D:/Programs/XILINX/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Programs/XILINX/Vivado/2019.2
+XILINX_VIVADO: D:/Programs/XILINX/Vivado/2019.2
+XILINX_VIVADO_HLS: D:/Programs/XILINX/Vivado/2019.2
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 684 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 84 MB (+85735kb) [00:00:11]
+// [Engine Memory]: 603 MB (+481036kb) [00:00:11]
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\pezol\Desktop\PUC\Arquitectura de Computadores\Proyecto-Arqui\Proyecto Base\Proyecto Base.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base' 
+// HMemoryUtils.trashcanNow. Engine heap size: 722 MB. GUI used memory: 49 MB. Current time: 10/3/21, 11:55:38 PM CLST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base' INFO: [Project 1-313] Project file moved from '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 787 MB (+160577kb) [00:00:18]
+// [GUI Memory]: 94 MB (+5618kb) [00:00:19]
+// [GUI Memory]: 100 MB (+1874kb) [00:00:19]
+// WARNING: HEventQueue.dispatchEvent() is taking  2658 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/XILINX/Vivado/2019.2/data/ip'. 
