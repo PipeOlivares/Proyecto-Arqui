@@ -94,8 +94,8 @@ signal load_pc          : std_logic;
 
 begin
 ram_address <= rom_dataout(31 downto 20);
-ram_datain <= ALU_result;
-dis <= ALU_result;
+ram_datain <= a_dataout;
+dis <= a_dataout;
 
 --Muxer A
 with a_sel select
