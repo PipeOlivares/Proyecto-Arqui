@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity control_unit is
-    Port ( instruct : in STD_LOGIC_VECTOR (20 downto 0);
+    Port ( instruct : in STD_LOGIC_VECTOR (19 downto 0);
            c_stat : in STD_LOGIC;
            n_stat : in STD_LOGIC;
            z_stat : in STD_LOGIC;

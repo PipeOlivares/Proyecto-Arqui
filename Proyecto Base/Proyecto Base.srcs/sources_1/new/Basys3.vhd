@@ -105,7 +105,7 @@ component Reg is
            dataout  : out std_logic_vector (15 downto 0));  -- Se�ales de salida de datos.
     end component;
 component control_unit is
-    Port ( instruct : in STD_LOGIC_VECTOR (20 downto 0);
+    Port ( instruct : in STD_LOGIC_VECTOR (19 downto 0);
            c_stat : in STD_LOGIC;
            n_stat : in STD_LOGIC;
            z_stat : in STD_LOGIC;
@@ -330,7 +330,7 @@ inst_B: Reg port map(
     dataout     => b_dataout
     );
 inst_CU: control_unit port map(
-    instruct    => rom_dataout(18 downto 0),
+    instruct    => rom_dataout(19 downto 0),
     c_stat      => flag_c_0,
     n_stat      => flag_n_0,
     z_stat      => flag_z_0,
