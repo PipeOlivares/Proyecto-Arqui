@@ -16,7 +16,7 @@ end ROM;
 
 architecture Behavioral of ROM is
 
-type memory_array is array (0 to 26) of std_logic_vector (35 downto 0); 
+type memory_array is array (0 to 27) of std_logic_vector (35 downto 0); 
 
 signal memory : memory_array:= (
 "000000000000010100000000010001000000", --MOV A,5              0
@@ -45,7 +45,8 @@ signal memory : memory_array:= (
 "000000000000000100000000010001100000", --MOV A,(fac2)         23
 "000000000000000100000000000010101111", --SHL (fac2),A         24
 "000000000000110000000000000010110000", --JMP loop             25
-"000000000000001000000000010001100000" --MOV A,(res) SAVER     26
+"000000000000001000000000010001100000", --MOV A,(res) SAVER    26
+"000000000011011000000000000010110000"  --JMP END 27
         ); 
 
 begin
