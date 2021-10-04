@@ -45,9 +45,6 @@ end STATUS;
 
 architecture Behavioral of STATUS is
 begin
-z_out <= '0';
-c_out <= '0';
-n_out <= '0';
 status_prosses : process (clock)           -- Proceso sensible a clock.
         begin
           if (rising_edge(clock)) then  -- Condici�n de flanco de subida de clock.
