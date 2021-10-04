@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Oct  4 13:44:01 2021
+# Process ID: 215719
+# Current directory: /home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1
+# Command line: vivado -log Basys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Basys3.tcl
+# Log file: /home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.vds
+# Journal file: /home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Basys3.tcl -notrace
+Command: synth_design -top Basys3 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 215750 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1784.195 ; gain = 202.688 ; free physical = 215 ; free virtual = 4616
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Basys3' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
+INFO: [Synth 8-3491] module 'CPU' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:7' bound to instance 'inst_CPU' of component 'CPU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:237]
+INFO: [Synth 8-638] synthesizing module 'CPU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'CPU' (1#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:20]
+INFO: [Synth 8-3491] module 'ROM' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:6' bound to instance 'inst_ROM' of component 'ROM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'ROM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
+ERROR: [Synth 8-421] mismatched array sizes in rhs and lhs of assignment [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:21]
+ERROR: [Synth 8-285] failed synthesizing module 'ROM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
+ERROR: [Synth 8-285] failed synthesizing module 'Basys3' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1845.945 ; gain = 264.438 ; free physical = 248 ; free virtual = 4649
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+9 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  4 13:44:27 2021...
