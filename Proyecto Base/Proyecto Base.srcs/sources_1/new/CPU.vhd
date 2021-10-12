@@ -14,7 +14,9 @@ entity CPU is
            ram_write : out STD_LOGIC;
            rom_address : out STD_LOGIC_VECTOR (11 downto 0);
            rom_dataout : in STD_LOGIC_VECTOR (35 downto 0);
-           dis : out STD_LOGIC_VECTOR (15 downto 0));
+           dis : out STD_LOGIC_VECTOR (15 downto 0);
+           flags: out STD_LOGIC_VECTOR (2 downto 0);
+           pc_out: out STD_LOGIC_VECTOR (11 downto 0)) ; ---c,z,n
 end CPU;
 
 architecture Behavioral of CPU is
@@ -92,24 +94,32 @@ signal b_enable         : std_logic;
 
 signal load_pc          : std_logic;
 
+signal counter          : std_logic_vector(11 downto 0);
+
 begin
 ram_address <= rom_dataout(31 downto 20);
 ram_datain <= a_dataout;
 dis <= a_dataout;
+flags(2) <= flag_c_0;
+flags(1) <= flag_z_0;
+flags(0) <= flag_n_0;
+rom_address <= counter;
+pc_out <= counter;
+
 
 --Muxer A
 with a_sel select
     a_data_ALU <= a_dataout when "01",
                 "0000000000000000" when "00",
                 "1111111111111111" when "11",
-                "1111111111111111" when "10";
+                "0000000000000001" when "10";
     
 --Muxer B
 
 with b_sel select
     b_data_ALU <= b_dataout when "01",
                 "0000000000000000" when "00",
-                "1111111111111111" when "11",
+                ram_dataout when "11",
                 rom_dataout(35 downto 20) when "10";
                 
 --Instancia ALU

@@ -56,7 +56,10 @@ enA <= decider(10);
 enB <= decider(9);
 selA <= decider(8 downto 7);
 selB <= decider(6 downto 5);
-loadPC <= decider(4);
-selALU <= decider(3 downto 1);
 w <= decider(0);
+selALU <= decider(3 downto 1);
+with instruct(19) select
+    loadPC <= decider(4) when '0',
+    decider(4) and z_stat when '1';
+    
 end Behavioral;

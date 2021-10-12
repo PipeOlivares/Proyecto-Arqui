@@ -91,7 +91,9 @@ component CPU is
            ram_write : out STD_LOGIC;
            rom_address : out STD_LOGIC_VECTOR (11 downto 0);
            rom_dataout : in STD_LOGIC_VECTOR (35 downto 0);
-           dis : out STD_LOGIC_VECTOR (15 downto 0));
+           dis : out STD_LOGIC_VECTOR (15 downto 0);
+           flags: out STD_LOGIC_VECTOR (2 downto 0);
+           pc_out: out STD_LOGIC_VECTOR (11 downto 0));
     end component;
 
 
@@ -140,7 +142,6 @@ dis_a  <= dis(15 downto 12);
 dis_b  <= dis(11 downto 8);
 dis_c  <= dis(7 downto 4);
 dis_d  <= dis(3 downto 0);
-led <= dis;
                     
 -- Muxer del address de la ROM.          
 with clear select
@@ -162,7 +163,9 @@ inst_CPU: CPU port map(
     ram_write   => write_ram,
     rom_address => cpu_rom_address,
     rom_dataout => rom_dataout,
-    dis         => dis
+    dis         => dis,
+    flags       => led(15 downto 13),
+    pc_out      => led(11 downto 0)
     );
 
 -- Instancia de la memoria RAM.
@@ -186,7 +189,7 @@ inst_RAM: RAM port map(
     
  -- Intancia del divisor de la se�al del clock.
 inst_Clock_Divider: Clock_Divider port map(
-    speed       => "10",                    -- Selector de velocidad: "00" full, "01" fast, "10" normal y "11" slow. 
+    speed       => "11",                    -- Selector de velocidad: "00" full, "01" fast, "10" normal y "11" slow. 
     clk         => clk,                     -- No Tocar - Entrada de la se�al del clock completo (100Mhz).
     clock       => clock                    -- No Tocar - Salida de la se�al del clock reducido: 25Mhz, 8hz, 2hz y 0.5hz.
     );
