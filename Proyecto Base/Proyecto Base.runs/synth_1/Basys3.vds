@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2019.2 (64-bit)
-# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Oct 12 11:00:19 2021
-# Process ID: 105372
-# Current directory: /home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1
-# Command line: vivado -log Basys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Basys3.tcl
-# Log file: /home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.vds
-# Journal file: /home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/vivado.jou
+# Start of session at: Thu Nov  4 15:16:38 2021
+# Process ID: 12256
+# Current directory: C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1
+# Command line: vivado.exe -log Basys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Basys3.tcl
+# Log file: C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.vds
+# Journal file: C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Basys3.tcl -notrace
 Command: synth_design -top Basys3 -part xc7a35tcpg236-1
@@ -16,83 +16,83 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 105401 
+INFO: Helper process launched with PID 15596 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1784.227 ; gain = 202.719 ; free physical = 988 ; free virtual = 3443
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 949.234 ; gain = 233.914
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Basys3' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
-INFO: [Synth 8-3491] module 'CPU' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:7' bound to instance 'inst_CPU' of component 'CPU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:157]
-INFO: [Synth 8-638] synthesizing module 'CPU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:22]
-INFO: [Synth 8-3491] module 'ALU' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:4' bound to instance 'inst_ALU' of component 'ALU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:126]
-INFO: [Synth 8-638] synthesizing module 'ALU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
-INFO: [Synth 8-3491] module 'Adder16' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder16' of component 'Adder16' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'Adder16' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA0' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:27]
-INFO: [Synth 8-638] synthesizing module 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:12]
-INFO: [Synth 8-3491] module 'HA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:5' bound to instance 'inst_HA' of component 'HA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:29]
-INFO: [Synth 8-638] synthesizing module 'HA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'HA' (1#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:12]
-INFO: [Synth 8-3491] module 'HA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:5' bound to instance 'inst_HA2' of component 'HA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'FA' (2#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:12]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA1' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:35]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA2' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:43]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA3' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:51]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA4' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:59]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA5' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:67]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA6' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:75]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA7' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:83]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA8' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:90]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA9' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:97]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA10' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:104]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA11' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:111]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA12' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:118]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA13' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:125]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA14' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:132]
-INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA15' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:139]
-INFO: [Synth 8-256] done synthesizing module 'Adder16' (3#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (4#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
-INFO: [Synth 8-3491] module 'Reg' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_A' of component 'Reg' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:135]
-INFO: [Synth 8-638] synthesizing module 'Reg' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'Reg' (5#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
-INFO: [Synth 8-3491] module 'Reg' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_B' of component 'Reg' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:144]
-INFO: [Synth 8-3491] module 'control_unit' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:34' bound to instance 'inst_CU' of component 'control_unit' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'control_unit' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'control_unit' (6#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:51]
-INFO: [Synth 8-3491] module 'STATUS' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:7' bound to instance 'inst_STATUS' of component 'STATUS' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:166]
-INFO: [Synth 8-638] synthesizing module 'STATUS' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'STATUS' (7#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:18]
-INFO: [Synth 8-3491] module 'PC' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:35' bound to instance 'inst_PC' of component 'PC' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:177]
-INFO: [Synth 8-638] synthesizing module 'PC' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'PC' (8#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:43]
-WARNING: [Synth 8-3848] Net counter in module/entity CPU does not have driver. [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:97]
-INFO: [Synth 8-256] done synthesizing module 'CPU' (9#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:22]
-INFO: [Synth 8-3491] module 'ROM' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:6' bound to instance 'inst_ROM' of component 'ROM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:172]
-INFO: [Synth 8-638] synthesizing module 'ROM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'ROM' (10#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
-INFO: [Synth 8-3491] module 'RAM' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:8' bound to instance 'inst_RAM' of component 'RAM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:182]
-INFO: [Synth 8-638] synthesizing module 'RAM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (11#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
-INFO: [Synth 8-3491] module 'Clock_Divider' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:7' bound to instance 'inst_Clock_Divider' of component 'Clock_Divider' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:191]
-INFO: [Synth 8-638] synthesizing module 'Clock_Divider' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'Clock_Divider' (12#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
-INFO: [Synth 8-3491] module 'Display_Controller' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:7' bound to instance 'inst_Display_Controller' of component 'Display_Controller' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:198]
-INFO: [Synth 8-638] synthesizing module 'Display_Controller' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'Display_Controller' (13#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
-INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer0' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:209]
-INFO: [Synth 8-638] synthesizing module 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'Debouncer' (14#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
-INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer1' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:210]
-INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer2' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:211]
-INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer3' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:212]
-INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer4' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:213]
-INFO: [Synth 8-3491] module 'Programmer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:6' bound to instance 'inst_Programmer' of component 'Programmer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:216]
-INFO: [Synth 8-638] synthesizing module 'Programmer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
-INFO: [Synth 8-3491] module 'UART' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:11' bound to instance 'inst_UART' of component 'UART' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:118]
-INFO: [Synth 8-638] synthesizing module 'UART' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'Basys3' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
+INFO: [Synth 8-3491] module 'CPU' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:7' bound to instance 'inst_CPU' of component 'CPU' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:22]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:4' bound to instance 'inst_ALU' of component 'ALU' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
+INFO: [Synth 8-3491] module 'Adder16' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder16' of component 'Adder16' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'Adder16' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA0' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:12]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:5' bound to instance 'inst_HA' of component 'HA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'HA' (1#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:12]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:5' bound to instance 'inst_HA2' of component 'HA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'FA' (2#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:12]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA1' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:35]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA2' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:43]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA3' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:51]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA4' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:59]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA5' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:67]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA6' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:75]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA7' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:83]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA8' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:90]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA9' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:97]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA10' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:104]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA11' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:111]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA12' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:118]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA13' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:125]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA14' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:132]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA15' of component 'FA' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:139]
+INFO: [Synth 8-256] done synthesizing module 'Adder16' (3#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (4#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_A' of component 'Reg' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'Reg' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (5#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_B' of component 'Reg' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:144]
+INFO: [Synth 8-3491] module 'control_unit' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:34' bound to instance 'inst_CU' of component 'control_unit' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'control_unit' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'control_unit' (6#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:51]
+INFO: [Synth 8-3491] module 'STATUS' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:7' bound to instance 'inst_STATUS' of component 'STATUS' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'STATUS' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'STATUS' (7#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:18]
+INFO: [Synth 8-3491] module 'PC' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:35' bound to instance 'inst_PC' of component 'PC' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'PC' (8#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:43]
+WARNING: [Synth 8-3848] Net counter in module/entity CPU does not have driver. [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'CPU' (9#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:22]
+INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:6' bound to instance 'inst_ROM' of component 'ROM' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (10#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
+INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:8' bound to instance 'inst_RAM' of component 'RAM' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (11#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
+INFO: [Synth 8-3491] module 'Clock_Divider' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:7' bound to instance 'inst_Clock_Divider' of component 'Clock_Divider' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'Clock_Divider' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'Clock_Divider' (12#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
+INFO: [Synth 8-3491] module 'Display_Controller' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:7' bound to instance 'inst_Display_Controller' of component 'Display_Controller' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'Display_Controller' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Display_Controller' (13#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer0' of component 'Debouncer' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'Debouncer' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'Debouncer' (14#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer1' of component 'Debouncer' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:210]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer2' of component 'Debouncer' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:211]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer3' of component 'Debouncer' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:212]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer4' of component 'Debouncer' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:213]
+INFO: [Synth 8-3491] module 'Programmer' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:6' bound to instance 'inst_Programmer' of component 'Programmer' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'Programmer' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
+INFO: [Synth 8-3491] module 'UART' declared at 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:11' bound to instance 'inst_UART' of component 'UART' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'UART' [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
 	Parameter DIVISOR bound to: 54 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'UART' (15#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'Programmer' (16#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'Basys3' (17#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'UART' (15#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'Programmer' (16#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Basys3' (17#1) [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[11]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[10]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[9]
@@ -129,7 +129,7 @@ WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1845.977 ; gain = 264.469 ; free physical = 1019 ; free virtual = 3475
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 1023.828 ; gain = 308.508
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -142,46 +142,46 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1845.977 ; gain = 264.469 ; free physical = 1015 ; free virtual = 3470
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 1023.828 ; gain = 308.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1845.977 ; gain = 264.469 ; free physical = 1015 ; free virtual = 3470
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 1023.828 ; gain = 308.508
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1845.977 ; gain = 0.000 ; free physical = 1008 ; free virtual = 3463
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1023.828 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]
-Finished Parsing XDC File [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Basys3_propImpl.xdc].
+Parsing XDC File [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]
+Finished Parsing XDC File [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Basys3_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1979.742 ; gain = 0.000 ; free physical = 921 ; free virtual = 3377
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1126.762 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1979.742 ; gain = 0.000 ; free physical = 921 ; free virtual = 3377
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1126.762 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 990 ; free virtual = 3445
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:32 . Memory (MB): peak = 1126.762 ; gain = 411.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 990 ; free virtual = 3445
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:32 . Memory (MB): peak = 1126.762 ; gain = 411.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 990 ; free virtual = 3445
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:32 . Memory (MB): peak = 1126.762 ; gain = 411.441
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 981 ; free virtual = 3437
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:32 . Memory (MB): peak = 1126.762 ; gain = 411.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -352,7 +352,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3936] Found unconnected internal register 'inst_Programmer/address_reg' and it is trimmed from '12' to '4' bits. [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:110]
+WARNING: [Synth 8-3936] Found unconnected internal register 'inst_Programmer/address_reg' and it is trimmed from '12' to '4' bits. [C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:110]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port led[12]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[14]
@@ -387,7 +387,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Pro
 INFO: [Synth 8-3886] merging instance 'inst_Programmer/inst_UART/tx_state_reg[bits][1]' (FDE) to 'inst_Programmer/inst_UART/tx_state_reg[bits][0]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[bits][0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 960 ; free virtual = 3419
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:39 . Memory (MB): peak = 1126.762 ; gain = 411.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -415,13 +415,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 842 ; free virtual = 3301
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:47 . Memory (MB): peak = 1126.762 ; gain = 411.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 840 ; free virtual = 3300
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:47 . Memory (MB): peak = 1127.855 ; gain = 412.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -448,7 +448,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 837 ; free virtual = 3297
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:48 . Memory (MB): peak = 1160.230 ; gain = 444.910
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -472,13 +472,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 838 ; free virtual = 3297
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1166.059 ; gain = 450.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 838 ; free virtual = 3297
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1166.059 ; gain = 450.738
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -497,25 +497,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 838 ; free virtual = 3297
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1166.059 ; gain = 450.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 838 ; free virtual = 3297
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1166.059 ; gain = 450.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 838 ; free virtual = 3297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1166.059 ; gain = 450.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 838 ; free virtual = 3297
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1166.059 ; gain = 450.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -567,18 +567,18 @@ Report Instance Areas:
 |12    |  inst_ROM                |ROM                |   349|
 +------+--------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1979.742 ; gain = 398.234 ; free physical = 838 ; free virtual = 3297
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:52 . Memory (MB): peak = 1166.059 ; gain = 450.738
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1979.742 ; gain = 264.469 ; free physical = 890 ; free virtual = 3350
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1979.750 ; gain = 398.234 ; free physical = 890 ; free virtual = 3350
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1166.059 ; gain = 347.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:53 . Memory (MB): peak = 1166.059 ; gain = 450.738
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1979.750 ; gain = 0.000 ; free physical = 961 ; free virtual = 3421
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1178.125 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 357 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1979.750 ; gain = 0.000 ; free physical = 906 ; free virtual = 3365
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1178.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 284 instances were transformed.
   RAM16X1S => RAM32X1S (RAMS32): 28 instances
@@ -587,10 +587,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 100 Infos, 54 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 1979.750 ; gain = 541.586 ; free physical = 1038 ; free virtual = 3497
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1979.750 ; gain = 0.000 ; free physical = 1038 ; free virtual = 3497
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:08 . Memory (MB): peak = 1178.125 ; gain = 752.961
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1178.125 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Basys3_utilization_synth.rpt -pb Basys3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 12 11:01:18 2021...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  4 15:18:02 2021...

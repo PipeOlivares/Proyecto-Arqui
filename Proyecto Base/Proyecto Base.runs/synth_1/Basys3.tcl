@@ -17,36 +17,34 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.cache/wt} [current_project]
-set_property parent.project_path {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_cache_permissions disable [current_project]
 read_vhdl -library xil_defaultlib {
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd}
-  {/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd}
+  {C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -56,8 +54,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc}}
-set_property used_in_implementation false [get_files {{/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc}}]
+read_xdc {{C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/pezol/Desktop/PUC/Arquitectura de Computadores/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

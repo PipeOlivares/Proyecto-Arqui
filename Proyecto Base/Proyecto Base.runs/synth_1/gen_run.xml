@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1634047216">
-  <File Type="VDS-TIMING-PB" Name="Basys3_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Basys3_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="Basys3.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="Basys3_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Basys3_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="Basys3_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="Basys3.vds"/>
-  <File Type="REPORTS-TCL" Name="Basys3_reports.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1636049789">
   <File Type="PA-TCL" Name="Basys3.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Basys3_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Basys3_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Basys3.vds"/>
+  <File Type="RDS-UTIL" Name="Basys3_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Basys3_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Basys3.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Basys3_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Basys3_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
