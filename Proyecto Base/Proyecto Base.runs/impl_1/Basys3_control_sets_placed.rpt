@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Oct 12 11:02:13 2021
+| Date         : Sun Nov  7 16:58:05 2021
 | Host         : rafa-ThinkPad-S5-Yoga-15 running 64-bit Linux Mint 20
 | Command      : report_control_sets -verbose -file Basys3_control_sets_placed.rpt
 | Design       : Basys3
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    32 |
-|    Minimum number of control sets                        |    32 |
+| Total control sets                                       |    33 |
+|    Minimum number of control sets                        |    33 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    40 |
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    32 |
+| Total control sets |    33 |
 | >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     2 |
-| >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     5 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     4 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              26 |            9 |
+| No           | No                    | No                     |              23 |            8 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              60 |           18 |
-| Yes          | No                    | No                     |              61 |           18 |
+| No           | Yes                   | No                     |              60 |           19 |
+| Yes          | No                    | No                     |              72 |           22 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              45 |           12 |
+| Yes          | Yes                   | No                     |              45 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -76,35 +76,36 @@ Table of Contents
 |  clock_BUFG           |                                                |                                                         |                1 |              1 |
 |  clk_IBUF_BUFG        | inst_Programmer/inst_UART/sample               | inst_Programmer/inst_UART/rx_state[bits][7]_i_1_n_0     |                1 |              4 |
 |  rx_state_reg[enable] | inst_Programmer/memory[3]_1                    |                                                         |                1 |              5 |
-|  rx_state_reg[enable] | inst_Programmer/memory[1]_3                    |                                                         |                2 |              8 |
-|  rx_state_reg[enable] | inst_Programmer/memory[5]_2                    |                                                         |                2 |              8 |
-|  rx_state_reg[enable] | inst_Programmer/memory[2]_4                    |                                                         |                4 |              8 |
-|  clk_IBUF_BUFG        | inst_Programmer/inst_UART/rx_state_next[nbits] | inst_Programmer/inst_UART/rx_state[bits][7]_i_1_n_0     |                3 |              9 |
-|  rx_state_reg[enable] |                                                |                                                         |                2 |              9 |
-|  clk_IBUF_BUFG        |                                                |                                                         |                6 |             16 |
-|  clock_BUFG           | inst_ROM/memory_reg_0_15_9_9/O                 | inst_Programmer/bussy                                   |                4 |             16 |
+|  rx_state_reg[enable] |                                                |                                                         |                1 |              6 |
+|  rx_state_reg[enable] | inst_Programmer/memory[4]_5                    |                                                         |                2 |              7 |
+|  rx_state_reg[enable] | inst_Programmer/memory[1]_3                    |                                                         |                1 |              8 |
+|  rx_state_reg[enable] | inst_Programmer/memory[2]_4                    |                                                         |                2 |              8 |
+|  rx_state_reg[enable] | inst_Programmer/memory[5]_2                    |                                                         |                3 |              8 |
+|  clk_IBUF_BUFG        | inst_Programmer/inst_UART/rx_state_next[nbits] | inst_Programmer/inst_UART/rx_state[bits][7]_i_1_n_0     |                2 |              9 |
 |  clock_BUFG           | inst_ROM/memory_reg_0_15_10_10/O               | inst_Programmer/bussy                                   |                4 |             16 |
-|  clock_BUFG           |                                                | inst_Programmer/bussy                                   |                6 |             16 |
+|  clock_BUFG           | inst_ROM/memory_reg_0_15_9_9/O                 | inst_Programmer/bussy                                   |                4 |             16 |
+|  clock_BUFG           |                                                | inst_Programmer/bussy                                   |                7 |             16 |
+|  clk_IBUF_BUFG        |                                                |                                                         |                6 |             16 |
 |  clk_IBUF_BUFG        |                                                | inst_Display_Controller/clock_divide_counter[0]_i_1_n_0 |                5 |             17 |
 |  clk_IBUF_BUFG        |                                                | inst_Clock_Divider/clear                                |                7 |             27 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready                          |                                                         |                7 |             28 |
-|  rx_state_reg[enable] | inst_Programmer/inst_UART/E[0]                 |                                                         |                9 |             32 |
-|  clock_BUFG           | inst_ROM/bussy_reg_2                           |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_9                           |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_8                           |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_7                           |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_6                           |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_5                           |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_4                           |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_3                           |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg                             |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_14                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_12                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_11                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_13                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_10                          |                                                         |               16 |             64 |
+|  clk_IBUF_BUFG        | inst_Programmer/ready                          |                                                         |                8 |             32 |
+|  rx_state_reg[enable] | inst_Programmer/inst_UART/E[0]                 |                                                         |               13 |             36 |
 |  clock_BUFG           | inst_ROM/bussy_reg_1                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_10                          |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_13                          |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_11                          |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_12                          |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_14                          |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_2                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_3                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_4                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_5                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_6                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_7                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_8                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg_9                           |                                                         |               16 |             64 |
 |  clock_BUFG           | inst_ROM/bussy_reg_0                           |                                                         |               16 |             64 |
+|  clock_BUFG           | inst_ROM/bussy_reg                             |                                                         |               16 |             64 |
 +-----------------------+------------------------------------------------+---------------------------------------------------------+------------------+----------------+
 
 

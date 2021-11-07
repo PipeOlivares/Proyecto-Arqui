@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Oct 12 11:01:18 2021
+| Date         : Sun Nov  7 16:56:19 2021
 | Host         : rafa-ThinkPad-S5-Yoga-15 running 64-bit Linux Mint 20
 | Command      : report_utilization -file Basys3_utilization_synth.rpt -pb Basys3_utilization_synth.pb
 | Design       : Basys3
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1445 |     0 |     20800 |  6.95 |
+| Slice LUTs*                | 1449 |     0 |     20800 |  6.97 |
 |   LUT as Logic             |  393 |     0 |     20800 |  1.89 |
-|   LUT as Memory            | 1052 |     0 |      9600 | 10.96 |
-|     LUT as Distributed RAM | 1052 |     0 |           |       |
+|   LUT as Memory            | 1056 |     0 |      9600 | 11.00 |
+|     LUT as Distributed RAM | 1056 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  191 |     0 |     41600 |  0.46 |
-|   Register as Flip Flop    |  191 |     0 |     41600 |  0.46 |
+| Slice Registers            |  199 |     0 |     41600 |  0.48 |
+|   Register as Flip Flop    |  199 |     0 |     41600 |  0.48 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                   |  544 |     0 |     16300 |  3.34 |
-| F8 Muxes                   |  270 |     0 |      8150 |  3.31 |
+| F7 Muxes                   |  545 |     0 |     16300 |  3.34 |
+| F8 Muxes                   |  272 |     0 |      8150 |  3.34 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 191   |          Yes |       Reset |            - |
+| 199   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,16 +152,16 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | RAMS64E  | 1024 |  Distributed Memory |
-| MUXF7    |  544 |               MuxFx |
-| MUXF8    |  270 |               MuxFx |
-| LUT6     |  210 |                 LUT |
-| FDRE     |  191 |        Flop & Latch |
-| LUT4     |  113 |                 LUT |
-| LUT2     |   97 |                 LUT |
-| RAMS32   |   28 |  Distributed Memory |
+| MUXF7    |  545 |               MuxFx |
+| MUXF8    |  272 |               MuxFx |
+| LUT6     |  212 |                 LUT |
+| FDRE     |  199 |        Flop & Latch |
+| LUT5     |   96 |                 LUT |
+| LUT4     |   72 |                 LUT |
+| LUT2     |   60 |                 LUT |
+| RAMS32   |   32 |  Distributed Memory |
 | OBUF     |   28 |                  IO |
 | CARRY4   |   27 |          CarryLogic |
-| LUT5     |   22 |                 LUT |
 | LUT3     |   13 |                 LUT |
 | LUT1     |    7 |                 LUT |
 | BUFG     |    3 |               Clock |

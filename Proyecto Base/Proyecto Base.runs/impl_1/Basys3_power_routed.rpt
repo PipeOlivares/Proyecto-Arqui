@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Tue Oct 12 11:02:41 2021
+| Date             : Sun Nov  7 16:58:53 2021
 | Host             : rafa-ThinkPad-S5-Yoga-15 running 64-bit Linux Mint 20
 | Command          : report_power -file Basys3_power_routed.rpt -pb Basys3_power_summary_routed.pb -rpx Basys3_power_routed.rpx
 | Design           : Basys3
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.115        |
+| Total On-Chip Power (W)  | 0.126        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.043        |
+| Dynamic (W)              | 0.054        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.4         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.002 |        3 |       --- |             --- |
-| Slice Logic              |     0.005 |     2562 |       --- |             --- |
-|   LUT as Distributed RAM |     0.004 |     1052 |      9600 |           10.96 |
-|   LUT as Logic           |     0.001 |      355 |     20800 |            1.71 |
-|   F7/F8 Muxes            |    <0.001 |      814 |     32600 |            2.50 |
+| Slice Logic              |     0.005 |     2575 |       --- |             --- |
+|   LUT as Distributed RAM |     0.002 |     1056 |      9600 |           11.00 |
+|   LUT as Logic           |     0.002 |      361 |     20800 |            1.74 |
+|   F7/F8 Muxes            |    <0.001 |      817 |     32600 |            2.51 |
 |   CARRY4                 |    <0.001 |       27 |      8150 |            0.33 |
-|   Register               |    <0.001 |      192 |     41600 |            0.46 |
+|   Register               |    <0.001 |      200 |     41600 |            0.48 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   Others                 |     0.000 |       14 |       --- |             --- |
-| Signals                  |     0.002 |      799 |       --- |             --- |
-| I/O                      |     0.033 |       31 |       106 |           29.25 |
+| Signals                  |     0.009 |      803 |       --- |             --- |
+| I/O                      |     0.039 |       31 |       106 |           29.25 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.115 |          |           |                 |
+| Total                    |     0.126 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.010 |      0.010 |
+| Vccint    |       1.000 |     0.025 |       0.015 |      0.010 |
 | Vccaux    |       1.800 |     0.014 |       0.001 |      0.013 |
-| Vcco33    |       3.300 |     0.010 |       0.009 |      0.001 |
+| Vcco33    |       3.300 |     0.012 |       0.011 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,10 +143,9 @@ Table of Contents
 +------------+-----------+
 | Name       | Power (W) |
 +------------+-----------+
-| Basys3     |     0.043 |
-|   inst_CPU |     0.001 |
+| Basys3     |     0.054 |
 |   inst_RAM |     0.005 |
-|   inst_ROM |     0.001 |
+|   inst_ROM |     0.008 |
 +------------+-----------+
 
 

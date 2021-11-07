@@ -20,6 +20,13 @@ entity CPU is
 end CPU;
 
 architecture Behavioral of CPU is
+component Adder16
+    Port ( a  : in  std_logic_vector (15 downto 0);
+           b  : in  std_logic_vector (15 downto 0);
+           ci : in  std_logic;
+           s  : out std_logic_vector (15 downto 0);
+           co : out std_logic);
+    end component;
 component Reg is
     Port ( 
            clock    : in  std_logic;                        -- Se�al del clock (reducido).
@@ -41,6 +48,9 @@ component control_unit is
            selB : out STD_LOGIC_VECTOR (1 downto 0);
            loadPC : out STD_LOGIC;
            selALU : out STD_LOGIC_VECTOR (2 downto 0);
+           pc_sel: out STD_LOGIC;
+           selDIn: out STD_LOGIC;
+           selADD: out STD_LOGIC_VECTOR (1 downto 0);
            w : out STD_LOGIC);
     end component;
 component ALU is
@@ -80,6 +90,8 @@ signal b_data_ALU       : std_logic_vector(15 downto 0); --Salida reg B
 signal b_sel            : std_logic_vector(1 downto 0);
 signal a_sel            : std_logic_vector(1 downto 0);
 
+signal DIn_sel          : std_logic;
+
 signal ALU_sel          : std_logic_vector(2 downto 0);
 signal ALU_result       : std_logic_vector(15 downto 0);
 signal flag_c           : std_logic;
@@ -93,19 +105,27 @@ signal a_enable         : std_logic;
 signal b_enable         : std_logic;
 
 signal load_pc          : std_logic;
+signal pc_in            : std_logic_vector(11 downto 0);
+signal pc_select        : std_logic;
 
 signal counter          : std_logic_vector(11 downto 0);
+signal ram_inst         : std_logic_vector(15 downto 0);
+
+signal adder_out        : std_logic_vector(15 downto 0);
+signal adder_c          : std_logic;
+signal selAdd           : std_logic_vector(1 downto 0);
+
+signal ram_add          : std_logic_vector(11 downto 0);
 
 begin
-ram_address <= rom_dataout(31 downto 20);
-ram_datain <= a_dataout;
+ram_address <= ram_add;
 dis <= a_dataout;
 flags(2) <= flag_c_0;
 flags(1) <= flag_z_0;
 flags(0) <= flag_n_0;
 rom_address <= counter;
 pc_out <= counter;
-
+ram_inst(11 downto 0) <= rom_dataout(31 downto 20); 
 
 --Muxer A
 with a_sel select
@@ -122,6 +142,21 @@ with b_sel select
                 ram_dataout when "11",
                 rom_dataout(35 downto 20) when "10";
                 
+--Muxer PC
+with pc_select select
+    pc_in <= rom_dataout(31 downto 20) when '0',
+                ram_dataout(11 downto 0) when '1';
+
+
+--Muxer Ram datain
+with DIn_sel select
+    ram_datain <= ALU_result when '0',
+                adder_out when '1';
+
+--Muxer Ram addres
+with selAdd select
+    ram_add <= rom_dataout(31 downto 20) when "00",
+                b_dataout(11 downto 0) when others;           
 --Instancia ALU
 inst_ALU: ALU port map(
     a           => a_data_ALU,
@@ -161,6 +196,9 @@ inst_CU: control_unit port map(
     selB        => b_sel,
     loadPC      => load_pc,
     selALU      => ALU_sel,
+    pc_sel      => pc_select,
+    selDIn      => DIn_sel,
+    selADD      =>selAdd,
     w           => ram_write
     );
 inst_STATUS: STATUS port map(
@@ -175,11 +213,19 @@ inst_STATUS: STATUS port map(
     );
 
 inst_PC: PC port map(
-    datain      => rom_dataout(31 downto 20),
+    datain      => pc_in,
     load        => load_pc,
     clock       => clock,
     clear       => clear,
     dataout     => rom_address
     );
+inst_Adder16: Adder16 port map(
+        a      =>ram_inst,
+        b      =>"0000000000000000",
+        ci      =>'1',
+        s      =>adder_out,
+        co    =>adder_c
+    );      
+    
 end Behavioral;
 

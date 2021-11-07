@@ -42,6 +42,9 @@ entity control_unit is
            selB : out STD_LOGIC_VECTOR (1 downto 0);
            loadPC : out STD_LOGIC;
            selALU : out STD_LOGIC_VECTOR (2 downto 0);
+           pc_sel: out STD_LOGIC;
+           selDIn: out STD_LOGIC;
+           selADD : out STD_LOGIC_VECTOR (1 downto 0);
            w : out STD_LOGIC);
 end control_unit;
 
@@ -51,6 +54,9 @@ end control_unit;
 architecture Behavioral of control_unit is
 signal decider : STD_LOGIC_VECTOR(10 downto 0);
 begin
+selADD <= instruct(14 downto 13);
+selDIn <= instruct(12);
+pc_sel <= instruct(11);
 decider <= instruct(10 downto 0);
 enA <= decider(10);
 enB <= decider(9);
