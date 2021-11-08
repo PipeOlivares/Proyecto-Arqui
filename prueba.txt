@@ -1,20 +1,70 @@
 DATA:
-a E5h // 11100101b
-b B3h // 10110011b
-bits 0b
-CODE: // Contar bits en 1 compartidos
-MOV A, ( a) // a a A
-AND A , ( 1d ) // A & b a A
-MOV A,(B)
-JMP loop // Empieza desde loop
-bit:
-INC (2h) // bits ++
-loop:
-CMP A ,0b // Si A == 0
-JEQ end // Terminar
-SHR A // Si A >> 1 genera carry
-JCR bit // Siguiente desde bit
-JMP loop // Siguiente desde loop
-end:
-MOV A,(10b) // Resultado a A
-JMP end
+
+ nulo 238
+ i 10
+
+CODE:
+
+//////////////////////////////////////////////////////////////////////////
+paso1:  // Testear "MOV A|B,Lit", "CMP A,B" y "JEQ lab"
+ MOV A,0
+ MOV B,1
+ CMP A,B
+ JEQ mal
+ MOV B,1
+ MOV A,0
+ CMP A,B
+ JEQ mal
+ MOV A,1
+ CMP A,B
+ JEQ paso2
+ JMP mal
+//////////////////////////////////////////////////////////////////////////
+paso2:  // Testear "JMP"
+ JMP paso3
+ CMP A,B
+ JEQ mal
+ JMP mal
+//////////////////////////////////////////////////////////////////////////
+paso3:  // Testear "MOV A,(Dir)" y "MOV B,(Lit)"
+ MOV A,(i)
+ CMP A,B
+ JEQ mal
+ MOV B,(1)
+ CMP A,B
+ JEQ paso4
+ JMP mal
+//////////////////////////////////////////////////////////////////////////
+paso4:  // Testear "MOV A,(Lit)" y "MOV B,(Dir)"
+ MOV A,1
+ MOV B,1
+ MOV B,(i)
+ CMP A,B
+ JEQ mal
+ MOV A,(1)
+ CMP A,B
+ JEQ paso5
+ JMP mal
+//////////////////////////////////////////////////////////////////////////
+paso5:  // Testear "INC(Dir)" y Data
+ INC (i)
+ MOV A,(i)
+ MOV B,11
+ CMP A,B
+ JEQ bien
+ JMP mal
+//////////////////////////////////////////////////////////////////////////
+bien:  // Muestra AA,11
+ MOV A,170
+ MOV B,17
+ JMP null
+
+mal:  // Muestra FF,FF
+ MOV A,255
+ MOV B,255
+
+null:
+ JMP null
+ CMP A,B
+ JEQ null
+//////////////////////////////////////////////////////////////////////////

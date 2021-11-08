@@ -41,7 +41,6 @@ with open('r.txt', 'w+') as file:
 
 		def op_coder(op):     #Funcion que pasa los op codes '110100101' al formato de [hexa,hexa,hexa,hexa,hexa]
 			hexas=[]
-
 			a=op[0:4]
 			b =int(a, 2)
 			c =hex(b)
@@ -60,24 +59,26 @@ with open('r.txt', 'w+') as file:
 		ops_code=[]
 
 		for i in lines:
-			i=i.strip('\n')                
+			i=i.strip('\n').replace('\t','')            
 			op=i.split('//')
 			ops_code.append(op[0])
 
 		contador=0              #Este seria el contador para saber en que instruccion vamos
-
 		ops_code.pop(0)
 		data=[]
 		while ops_code[0].strip()!='CODE:':
 			data.append(ops_code.pop(0))   #Esto es para sacar todos los posibles valores en Data, funciona aunque no tenga ninguno
-
-			                                                              
-		#rom_programmer.begin(port_number = 0)   #Con esto parte el write (creo)
+                                                          
+		# rom_programmer.begin(port_number = 0)   #Con esto parte el write (creo)
 
 		dict_registros={}
 
 		for i in range(len(data)):
-			var=data[i].strip().split(' ')
+			
+			var=data[i].strip()
+			var = var.replace('\t','').split(' ')
+
+			
 			if len(var) >=  2:
 				dict_registros[var[0]]= format(i,'b').zfill(16)
 				if 'b' in var[1]:
@@ -88,11 +89,12 @@ with open('r.txt', 'w+') as file:
 					if 'd' in var[1]:
 						var[1]=var[1][:len(var[1])-1]
 
-					lit=str(format(int(var[1]), "b"))
+					lit=str(format(int(var[1]), "b")).zfill(16)
 				
 														#Esta parte esta media dudosa, pero es la de que tenemos que guardar los valores en los reg, 
 														#el tema es que no se si hay que crear los reg antes o no, pero asi es como lo hicimos en la entrega 1
-														
+				
+										
 				op=lit+'00000000010001000000'			#Esto es --MOV A,LIT
 				hexas=op_coder(op)
 				hexi = bytearray([int(a.replace("0x", ''), 16) for a in hexas])
@@ -115,25 +117,31 @@ with open('r.txt', 'w+') as file:
 		print(ops_code)
 		for i in range(len(ops_code)):
 			if ':' in ops_code[i]:                       #Guardar los labels
-					var= ops_code[i][:-1]
-					dict_labels[var] = str(format(int(contador + i + 1), "b")).zfill(16) 
+					var= ops_code[i][:-1].strip().replace(':','')
+					dict_labels[var.replace(':','')] = str(format(int(contador+ i+1), "b")).zfill(16) 
 					print(var)
 					print(contador)
+					ops_code[i] = "NOP"
 		for i in range(len(ops_code)):         #Aqui parte el CODE
-			if ops_code[i]=='' or ':' in ops_code[i]:    #Ignorar lineas vacias y los labels
+			if ops_code[i]=='' or ':' in ops_code[i] or ops_code[i] == '\n':    #Ignorar lineas vacias y los labels
 				pass
 
-			else:										 #Lineas de codigo
+			else:			
+											 #Lineas de codigo
 				var= ops_code[i]
+				
 				var = var.replace(' ','')
+				var = var.replace('\t','')
+				print(var)
 				if '(' in var:
 					if not '(B)' in var:
 						lab = var[var.index('(')+1:var.index(')')]	# lab -> variable o número
 						var = var[0:var.index('(')+1]+'REG'+var[var.index(')'):]
 						num = ''
-						if lab[:-1].isnumeric():
+						print(lab[-1])
+						if lab[-1] in "0123456789":
 							try:
-								num =  str(format(int(lab[:-1], encoding[lab[-1]]),'b')).zfill(16)
+								num =  str(format(int(lab, 10),'b')).zfill(16)
 								op = [num+ opi for opi in dict_op[var]]
 							except KeyError as e:
 								raise ValueError(f'''
@@ -141,15 +149,17 @@ with open('r.txt', 'w+') as file:
 	Se pueden usar los siguientes encodings:
 	{[x for x in encoding.keys()]}''')
 						else:
+							print(lab)
 							value = dict_registros.get(lab)
 							if value:
 								op = [value+ opi for opi in dict_op[var]]
 							else:
-								raise ValueError(f'Registro no identificado: {lab}')
+								raise ValueError(f'Registro no identificado: {lab}, {dict_registros}')
 					else:
 						op = [opi.zfill(36) for opi in dict_op[var]]
 				
 				elif any(x in var for x in jumps):
+					print('hola')
 					if 'CALL' in var:
 						lab = var[4:]
 					else:
@@ -169,6 +179,15 @@ with open('r.txt', 'w+') as file:
 					num = var[ind:-1]
 					num = str(format(int(num, encoding[var[-1]]),'b')).zfill(16)
 					op = [num + opi for opi in dict_op[var[:ind]+'L']]
+				elif "DECA" in var:
+					op = ['100000000010011000010'.zfill(36)]
+				elif "INCA" in var:
+					op = ['100000000010011000000'.zfill(36)]
+				elif var[-1] in '0123456789':									#Literales
+					var = var.split(',')
+					num = var[1]
+					num = str(format(int(num, 10),'b')).zfill(16)
+					op = [num + opi for opi in dict_op[var[0]+',L']]
 				else:
 					op = [opi.zfill(36) for opi in dict_op[var]]
 
