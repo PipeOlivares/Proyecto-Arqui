@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Sun Nov  7 20:49:18 2021
+| Date             : Mon Nov  8 13:50:21 2021
 | Host             : rafa-ThinkPad-S5-Yoga-15 running 64-bit Linux Mint 20
 | Command          : report_power -file Basys3_power_routed.rpt -pb Basys3_power_summary_routed.pb -rpx Basys3_power_routed.rpx
 | Design           : Basys3
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.130        |
+| Total On-Chip Power (W)  | 0.241        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.058        |
+| Dynamic (W)              | 0.169        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.4         |
-| Junction Temperature (C) | 25.6         |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.002 |        3 |       --- |             --- |
-| Slice Logic              |     0.005 |     2629 |       --- |             --- |
-|   LUT as Distributed RAM |     0.002 |     1060 |      9600 |           11.04 |
-|   LUT as Logic           |     0.002 |      399 |     20800 |            1.92 |
-|   F7/F8 Muxes            |    <0.001 |      816 |     32600 |            2.50 |
+| Clocks                   |     0.006 |        3 |       --- |             --- |
+| Slice Logic              |     0.024 |     7059 |       --- |             --- |
+|   LUT as Logic           |     0.014 |      647 |     20800 |            3.11 |
+|   LUT as Distributed RAM |     0.007 |     3364 |      9600 |           35.04 |
+|   F7/F8 Muxes            |     0.003 |     2551 |     32600 |            7.83 |
 |   CARRY4                 |    <0.001 |       30 |      8150 |            0.37 |
-|   Register               |    <0.001 |      222 |     41600 |            0.53 |
+|   Register               |    <0.001 |      238 |     41600 |            0.57 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
-|   Others                 |     0.000 |       14 |       --- |             --- |
-| Signals                  |     0.011 |      837 |       --- |             --- |
-| I/O                      |     0.040 |       31 |       106 |           29.25 |
+|   Others                 |     0.000 |       15 |       --- |             --- |
+| Signals                  |     0.089 |     1796 |       --- |             --- |
+| I/O                      |     0.050 |       31 |       106 |           29.25 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.130 |          |           |                 |
+| Total                    |     0.241 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.018 |      0.010 |
-| Vccaux    |       1.800 |     0.014 |       0.001 |      0.013 |
-| Vcco33    |       3.300 |     0.012 |       0.011 |      0.001 |
+| Vccint    |       1.000 |     0.129 |       0.119 |      0.010 |
+| Vccaux    |       1.800 |     0.014 |       0.002 |      0.013 |
+| Vcco33    |       3.300 |     0.015 |       0.014 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -140,13 +140,16 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------+-----------+
-| Name       | Power (W) |
-+------------+-----------+
-| Basys3     |     0.058 |
-|   inst_CPU |     0.001 |
-|   inst_RAM |     0.005 |
-|   inst_ROM |     0.010 |
-+------------+-----------+
++-------------------+-----------+
+| Name              | Power (W) |
++-------------------+-----------+
+| Basys3            |     0.169 |
+|   inst_CPU        |     0.010 |
+|     inst_PC       |     0.001 |
+|     inst_SP       |     0.008 |
+|   inst_Programmer |     0.041 |
+|   inst_RAM        |     0.015 |
+|   inst_ROM        |     0.054 |
++-------------------+-----------+
 
 
