@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Nov  7 16:54:35 2021
-# Process ID: 154195
+# Start of session at: Sun Nov  7 20:46:50 2021
+# Process ID: 21448
 # Current directory: /home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1
 # Command line: vivado -log Basys3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Basys3.tcl
 # Log file: /home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.vds
@@ -16,14 +16,14 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 154294 
+INFO: Helper process launched with PID 21479 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1784.195 ; gain = 202.688 ; free physical = 172 ; free virtual = 4031
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1784.223 ; gain = 203.719 ; free physical = 290 ; free virtual = 4004
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Basys3' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
 INFO: [Synth 8-3491] module 'CPU' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:7' bound to instance 'inst_CPU' of component 'CPU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:157]
 INFO: [Synth 8-638] synthesizing module 'CPU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:22]
-INFO: [Synth 8-3491] module 'ALU' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:4' bound to instance 'inst_ALU' of component 'ALU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:161]
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:4' bound to instance 'inst_ALU' of component 'ALU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:178]
 INFO: [Synth 8-638] synthesizing module 'ALU' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
 INFO: [Synth 8-3491] module 'Adder16' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder16' of component 'Adder16' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:73]
 INFO: [Synth 8-638] synthesizing module 'Adder16' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
@@ -51,37 +51,40 @@ INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/
 INFO: [Synth 8-3491] module 'FA' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA15' of component 'FA' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:139]
 INFO: [Synth 8-256] done synthesizing module 'Adder16' (3#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'ALU' (4#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
-INFO: [Synth 8-3491] module 'Reg' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_A' of component 'Reg' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:170]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_A' of component 'Reg' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:187]
 INFO: [Synth 8-638] synthesizing module 'Reg' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'Reg' (5#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
-INFO: [Synth 8-3491] module 'Reg' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_B' of component 'Reg' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:179]
-INFO: [Synth 8-3491] module 'control_unit' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:34' bound to instance 'inst_CU' of component 'control_unit' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:188]
-INFO: [Synth 8-638] synthesizing module 'control_unit' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'control_unit' (6#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:54]
-INFO: [Synth 8-3491] module 'STATUS' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:7' bound to instance 'inst_STATUS' of component 'STATUS' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:204]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_B' of component 'Reg' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:196]
+INFO: [Synth 8-3491] module 'control_unit' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:34' bound to instance 'inst_CU' of component 'control_unit' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'control_unit' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'control_unit' (6#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/control_unit.vhd:56]
+INFO: [Synth 8-3491] module 'STATUS' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:7' bound to instance 'inst_STATUS' of component 'STATUS' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:223]
 INFO: [Synth 8-638] synthesizing module 'STATUS' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:18]
 INFO: [Synth 8-256] done synthesizing module 'STATUS' (7#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/STATUS.vhd:18]
-INFO: [Synth 8-3491] module 'PC' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:35' bound to instance 'inst_PC' of component 'PC' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:215]
+INFO: [Synth 8-3491] module 'PC' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:35' bound to instance 'inst_PC' of component 'PC' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:234]
 INFO: [Synth 8-638] synthesizing module 'PC' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'PC' (8#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/PC.vhd:43]
-INFO: [Synth 8-3491] module 'Adder16' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder16' of component 'Adder16' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:222]
-WARNING: [Synth 8-3848] Net counter in module/entity CPU does not have driver. [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:111]
-INFO: [Synth 8-256] done synthesizing module 'CPU' (9#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:22]
+INFO: [Synth 8-3491] module 'Adder16' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder16' of component 'Adder16' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:241]
+INFO: [Synth 8-3491] module 'SP' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:35' bound to instance 'inst_SP' of component 'SP' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'SP' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'SP' (9#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:43]
+WARNING: [Synth 8-3848] Net counter in module/entity CPU does not have driver. [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:122]
+INFO: [Synth 8-256] done synthesizing module 'CPU' (10#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:22]
 INFO: [Synth 8-3491] module 'ROM' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:6' bound to instance 'inst_ROM' of component 'ROM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:172]
 INFO: [Synth 8-638] synthesizing module 'ROM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'ROM' (10#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (11#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
 INFO: [Synth 8-3491] module 'RAM' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:8' bound to instance 'inst_RAM' of component 'RAM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:182]
 INFO: [Synth 8-638] synthesizing module 'RAM' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (11#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (12#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
 INFO: [Synth 8-3491] module 'Clock_Divider' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:7' bound to instance 'inst_Clock_Divider' of component 'Clock_Divider' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:191]
 INFO: [Synth 8-638] synthesizing module 'Clock_Divider' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'Clock_Divider' (12#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'Clock_Divider' (13#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
 INFO: [Synth 8-3491] module 'Display_Controller' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:7' bound to instance 'inst_Display_Controller' of component 'Display_Controller' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:198]
 INFO: [Synth 8-638] synthesizing module 'Display_Controller' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'Display_Controller' (13#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Display_Controller' (14#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
 INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer0' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:209]
 INFO: [Synth 8-638] synthesizing module 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'Debouncer' (14#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'Debouncer' (15#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
 INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer1' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:210]
 INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer2' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:211]
 INFO: [Synth 8-3491] module 'Debouncer' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer3' of component 'Debouncer' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:212]
@@ -91,9 +94,9 @@ INFO: [Synth 8-638] synthesizing module 'Programmer' [/home/rafa/Desktop/Proyect
 INFO: [Synth 8-3491] module 'UART' declared at '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:11' bound to instance 'inst_UART' of component 'UART' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:118]
 INFO: [Synth 8-638] synthesizing module 'UART' [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
 	Parameter DIVISOR bound to: 54 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'UART' (15#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'Programmer' (16#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'Basys3' (17#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'UART' (16#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'Programmer' (17#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Basys3' (18#1) [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[11]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[10]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[9]
@@ -102,12 +105,6 @@ WARNING: [Synth 8-3331] design ROM has unconnected port address[7]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[6]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[5]
 WARNING: [Synth 8-3331] design ROM has unconnected port address[4]
-WARNING: [Synth 8-3331] design control_unit has unconnected port instruct[18]
-WARNING: [Synth 8-3331] design control_unit has unconnected port instruct[17]
-WARNING: [Synth 8-3331] design control_unit has unconnected port instruct[16]
-WARNING: [Synth 8-3331] design control_unit has unconnected port instruct[15]
-WARNING: [Synth 8-3331] design control_unit has unconnected port c_stat
-WARNING: [Synth 8-3331] design control_unit has unconnected port n_stat
 WARNING: [Synth 8-3331] design Basys3 has unconnected port led[12]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[14]
@@ -126,7 +123,7 @@ WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1846.945 ; gain = 265.438 ; free physical = 253 ; free virtual = 4041
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1846.973 ; gain = 266.469 ; free physical = 324 ; free virtual = 4039
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -139,12 +136,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1846.945 ; gain = 265.438 ; free physical = 221 ; free virtual = 4014
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1846.973 ; gain = 266.469 ; free physical = 322 ; free virtual = 4038
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1846.945 ; gain = 265.438 ; free physical = 221 ; free virtual = 4014
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1846.973 ; gain = 266.469 ; free physical = 322 ; free virtual = 4038
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1846.945 ; gain = 0.000 ; free physical = 216 ; free virtual = 4009
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1846.973 ; gain = 0.000 ; free physical = 315 ; free virtual = 4031
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -155,30 +152,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1979.711 ; gain = 0.000 ; free physical = 144 ; free virtual = 3949
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1981.707 ; gain = 0.000 ; free physical = 230 ; free virtual = 3947
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1979.711 ; gain = 0.000 ; free physical = 144 ; free virtual = 3949
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1981.707 ; gain = 0.000 ; free physical = 230 ; free virtual = 3947
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 238 ; free virtual = 4041
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 264 ; free virtual = 3982
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 237 ; free virtual = 4040
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 264 ; free virtual = 3982
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 238 ; free virtual = 4040
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 264 ; free virtual = 3982
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:52]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 226 ; free virtual = 4032
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 270 ; free virtual = 3990
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -212,7 +210,7 @@ Detailed RTL Component Info :
 	   4 Input     27 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
 	   4 Input     16 Bit        Muxes := 2     
-	   2 Input     12 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 4     
 	   2 Input      9 Bit        Muxes := 3     
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
@@ -256,20 +254,20 @@ Module Reg
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module control_unit 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 Module STATUS 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 3     
+Module SP 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module CPU 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 2     
-	   2 Input     12 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 3     
 Module ROM 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -386,7 +384,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Pro
 INFO: [Synth 8-3886] merging instance 'inst_Programmer/inst_UART/tx_state_reg[bits][1]' (FDE) to 'inst_Programmer/inst_UART/tx_state_reg[bits][0]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[bits][0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 210 ; free virtual = 4021
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 254 ; free virtual = 3974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -414,13 +412,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:58 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 136 ; free virtual = 3913
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 139 ; free virtual = 3859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:59 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 139 ; free virtual = 3916
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 138 ; free virtual = 3858
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -447,7 +445,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:01:00 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 139 ; free virtual = 3913
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 132 ; free virtual = 3853
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -471,13 +469,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 134 ; free virtual = 3908
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 134 ; free virtual = 3854
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 134 ; free virtual = 3908
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 134 ; free virtual = 3854
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -496,25 +494,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 136 ; free virtual = 3907
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 135 ; free virtual = 3855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 135 ; free virtual = 3907
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 135 ; free virtual = 3855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 136 ; free virtual = 3908
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 135 ; free virtual = 3855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 136 ; free virtual = 3908
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 135 ; free virtual = 3855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -531,65 +529,67 @@ Report Cell Usage:
 |      |Cell      |Count |
 +------+----------+------+
 |1     |BUFG      |     3|
-|2     |CARRY4    |    27|
+|2     |CARRY4    |    30|
 |3     |LUT1      |     7|
-|4     |LUT2      |    60|
-|5     |LUT3      |    13|
+|4     |LUT2      |    73|
+|5     |LUT3      |    25|
 |6     |LUT4      |    72|
-|7     |LUT5      |    96|
-|8     |LUT6      |   212|
-|9     |MUXF7     |    33|
+|7     |LUT5      |    47|
+|8     |LUT6      |   262|
+|9     |MUXF7     |    32|
 |10    |MUXF8     |    16|
-|11    |RAM16X1S  |    32|
+|11    |RAM16X1S  |    36|
 |12    |RAM256X1S |   256|
-|13    |FDRE      |   199|
-|14    |IBUF      |     2|
-|15    |OBUF      |    28|
-|16    |OBUFT     |     1|
+|13    |FDRE      |   207|
+|14    |FDSE      |    12|
+|15    |IBUF      |     2|
+|16    |OBUF      |    28|
+|17    |OBUFT     |     1|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+--------------------------+-------------------+------+
 |      |Instance                  |Module             |Cells |
 +------+--------------------------+-------------------+------+
-|1     |top                       |                   |  1057|
+|1     |top                       |                   |  1109|
 |2     |  inst_RAM                |RAM                |   366|
-|3     |  inst_CPU                |CPU                |    58|
+|3     |  inst_CPU                |CPU                |    71|
 |4     |    inst_A                |Reg                |    27|
 |5     |    inst_B                |Reg_0              |    16|
 |6     |    inst_PC               |PC                 |    12|
-|7     |    inst_STATUS           |STATUS             |     3|
-|8     |  inst_Clock_Divider      |Clock_Divider      |    60|
-|9     |  inst_Display_Controller |Display_Controller |    33|
-|10    |  inst_Programmer         |Programmer         |   189|
-|11    |    inst_UART             |UART               |    57|
-|12    |  inst_ROM                |ROM                |   317|
+|7     |    inst_SP               |SP                 |    13|
+|8     |    inst_STATUS           |STATUS             |     3|
+|9     |  inst_Clock_Divider      |Clock_Divider      |    60|
+|10    |  inst_Display_Controller |Display_Controller |    33|
+|11    |  inst_Programmer         |Programmer         |   222|
+|12    |    inst_UART             |UART               |    57|
+|13    |  inst_ROM                |ROM                |   323|
 +------+--------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 1979.711 ; gain = 398.203 ; free physical = 136 ; free virtual = 3907
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1981.707 ; gain = 401.203 ; free physical = 135 ; free virtual = 3855
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:01:02 . Memory (MB): peak = 1979.711 ; gain = 265.438 ; free physical = 189 ; free virtual = 3961
-Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 1979.719 ; gain = 398.203 ; free physical = 189 ; free virtual = 3961
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1981.707 ; gain = 266.469 ; free physical = 188 ; free virtual = 3908
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1981.715 ; gain = 401.203 ; free physical = 188 ; free virtual = 3908
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1979.719 ; gain = 0.000 ; free physical = 259 ; free virtual = 4030
-INFO: [Netlist 29-17] Analyzing 364 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1981.715 ; gain = 0.000 ; free physical = 258 ; free virtual = 3979
+INFO: [Netlist 29-17] Analyzing 370 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1979.719 ; gain = 0.000 ; free physical = 209 ; free virtual = 3982
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1981.715 ; gain = 0.000 ; free physical = 204 ; free virtual = 3924
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 288 instances were transformed.
-  RAM16X1S => RAM32X1S (RAMS32): 32 instances
+  A total of 292 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 36 instances
   RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 256 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-101 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
+105 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:29 . Memory (MB): peak = 1979.719 ; gain = 541.555 ; free physical = 339 ; free virtual = 4112
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1979.719 ; gain = 0.000 ; free physical = 339 ; free virtual = 4112
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 1981.715 ; gain = 543.555 ; free physical = 335 ; free virtual = 4055
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1981.715 ; gain = 0.000 ; free physical = 335 ; free virtual = 4055
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/rafa/Desktop/Proyecto-Arqui/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Basys3_utilization_synth.rpt -pb Basys3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  7 16:56:19 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  7 20:47:52 2021...

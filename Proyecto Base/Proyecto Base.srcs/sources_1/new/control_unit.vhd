@@ -45,6 +45,8 @@ entity control_unit is
            pc_sel: out STD_LOGIC;
            selDIn: out STD_LOGIC;
            selADD : out STD_LOGIC_VECTOR (1 downto 0);
+           incSP :out STD_LOGIC;
+           decSP: out STD_LOGIC;
            w : out STD_LOGIC);
 end control_unit;
 
@@ -54,6 +56,8 @@ end control_unit;
 architecture Behavioral of control_unit is
 signal decider : STD_LOGIC_VECTOR(10 downto 0);
 begin
+incSP <=instruct(16);
+decSP <=instruct(15);
 selADD <= instruct(14 downto 13);
 selDIn <= instruct(12);
 pc_sel <= instruct(11);
@@ -64,8 +68,14 @@ selA <= decider(8 downto 7);
 selB <= decider(6 downto 5);
 w <= decider(0);
 selALU <= decider(3 downto 1);
-with instruct(19) select
-    loadPC <= decider(4) when '0',
-    decider(4) and z_stat when '1';
+with instruct(19 downto 17) select  
+    loadPC <= decider(4) when "000", --JMP
+    decider(4) and z_stat when "001", --JEQ
+    decider(4) and not z_stat when "010", --JNE
+    decider(4) and not z_stat and not n_stat when "011", --JGT
+    decider(4) and not n_stat when "100", --JGE
+    decider(4) and n_stat when "101", --JLT
+    decider(4) and (n_stat or z_stat) when "110", --JLE
+    decider(4) and c_stat when "111"; --JCR
     
 end Behavioral;

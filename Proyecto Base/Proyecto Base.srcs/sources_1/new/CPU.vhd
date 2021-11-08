@@ -27,6 +27,15 @@ component Adder16
            s  : out std_logic_vector (15 downto 0);
            co : out std_logic);
     end component;
+
+component SP is
+    Port ( clock : in STD_LOGIC;
+           clear : in STD_LOGIC;
+           incSP : in STD_LOGIC;
+           decSP : in STD_LOGIC;
+           outSP : out STD_LOGIC_VECTOR (11 downto 0));
+end component;
+
 component Reg is
     Port ( 
            clock    : in  std_logic;                        -- Se�al del clock (reducido).
@@ -51,6 +60,8 @@ component control_unit is
            pc_sel: out STD_LOGIC;
            selDIn: out STD_LOGIC;
            selADD: out STD_LOGIC_VECTOR (1 downto 0);
+           incSP :out STD_LOGIC;
+           decSP: out STD_LOGIC;
            w : out STD_LOGIC);
     end component;
 component ALU is
@@ -117,7 +128,12 @@ signal selAdd           : std_logic_vector(1 downto 0);
 
 signal ram_add          : std_logic_vector(11 downto 0);
 
+signal sp_inc           :std_logic;
+signal sp_dec           :std_logic;
+signal sp_out           :std_logic_vector(11 downto 0);
+
 begin
+
 ram_address <= ram_add;
 dis <= a_dataout;
 flags(2) <= flag_c_0;
@@ -156,7 +172,8 @@ with DIn_sel select
 --Muxer Ram addres
 with selAdd select
     ram_add <= rom_dataout(31 downto 20) when "00",
-                b_dataout(11 downto 0) when others;           
+                b_dataout(11 downto 0) when "01",
+                sp_out when others;           
 --Instancia ALU
 inst_ALU: ALU port map(
     a           => a_data_ALU,
@@ -199,6 +216,8 @@ inst_CU: control_unit port map(
     pc_sel      => pc_select,
     selDIn      => DIn_sel,
     selADD      =>selAdd,
+    incSP       =>sp_inc,
+    decSP       =>sp_dec,
     w           => ram_write
     );
 inst_STATUS: STATUS port map(
@@ -226,6 +245,12 @@ inst_Adder16: Adder16 port map(
         s      =>adder_out,
         co    =>adder_c
     );      
-    
+inst_SP:      SP port map(
+           clock => clock,
+           clear => clear,
+           incSP => sp_inc,
+           decSP => sp_dec,
+           outSP => sp_out
+           );
 end Behavioral;
 
